@@ -9,6 +9,7 @@ function NavBar() {
                 <>
                     <Link to="/">Home</Link>
                     <Link to="/camera">Camera</Link>
+                    <Link to="/logout">Logout</Link>
                 </>
                 :
                 <>

@@ -7,7 +7,7 @@ module.exports = {
         if(username && email && pwd){
             if(username !== "" && email !== "" && pwd !== ""){
                 UserModel.register(username, email, pwd).then(()=>{
-                    res.status(400).json({message : "New user registered successfully"})
+                    res.status(200).json({message : "New user registered successfully"})
                 }).catch((err)=>{
                     res.status(500).json({message : "An error has occured"})
                 })

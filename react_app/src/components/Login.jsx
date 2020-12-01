@@ -24,13 +24,13 @@ function Login({history}) {
                 status = response.status
                 return response.json()
             }).then((data)=>{
-                if(status == 200){
+                if(status === 200){
                     alert("Auth Success")
                     console.log(data.token);
                     localStorage.setItem("token", data.token)
                     // history.push("/")
                     document.location.href = "http://localhost:3000/"
-                }else if(status == 400){
+                }else if(status === 400){
                     alert(data)
                 }
             })
