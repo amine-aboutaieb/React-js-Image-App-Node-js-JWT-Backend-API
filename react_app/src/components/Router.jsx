@@ -15,9 +15,9 @@ function Router() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/Register" exact component={Register} />
                 <StateContext.Provider value={{state, dispatch}}>
                     <NavBar />
+                    <Route path="/Register" exact component={Register} />
                     <Route path="/logout" exact component={Logout} />
                     <Route path="/login" exact component={Login} />
                     <ProtectedRoute path="/" component={Home}></ProtectedRoute>
