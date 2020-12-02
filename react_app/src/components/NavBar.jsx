@@ -1,22 +1,22 @@
 import React, {useContext} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import {StateContext} from './StateContext'
 
 function NavBar() {
     const {state} = useContext(StateContext)
     return (
-        <nav>
+        <nav className="navBar">
             {
                 (state.id !== null && state.username !== null && state.email !== null) ?
                 <>
-                    <Link to="/">Home</Link>
-                    <Link to="/camera">Camera</Link>
-                    <Link to="/logout">Logout</Link>
+                    <NavLink to="/" exact activeClassName="active">Home</NavLink>
+                    <NavLink to="/camera" activeClassName="active">Camera</NavLink>
+                    <NavLink to="/logout" activeClassName="active">Logout</NavLink>
                 </>
                 :
                 <>
-                    <Link to="/login">Login</Link>
-                    <Link to="/register">Register</Link>
+                    <NavLink to="/login" activeClassName="active">Login</NavLink>
+                    <NavLink to="/register" activeClassName="active">Register</NavLink>
                 </>
             }
         </nav>

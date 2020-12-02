@@ -8,7 +8,7 @@ function Home() {
     const {state, dispatch} = useContext(StateContext)
     return (
         <div>
-            <h1> {state.username}'s Homepage</h1>
+            <h2 className="homeTitle"> <span className="homeTitlep1">{state.username}'s</span> Homepage</h2>
         </div>
     )
 }

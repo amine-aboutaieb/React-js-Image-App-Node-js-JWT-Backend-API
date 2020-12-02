@@ -38,15 +38,14 @@ function Register({history}) {
         }
     }
     return (
-        <>
-            <h3>Register</h3>
-            <form style={{display:"flex", alignItems:"center"}}>
-                <input type="text" placeholder="Username..." ref={usernameRef} />
-                <input type="text" placeholder="Email..." ref={emailRef} />
-                <input type="text" placeholder="Password..." ref={pwdRef} />
-                <button onClick={register}>Register</button>
-            </form>
-        </>
+        
+        <form className="Form">
+            <input type="text" placeholder="Username..." ref={usernameRef} />
+            <input type="text" placeholder="Email..." ref={emailRef} />
+            <input type="password" placeholder="Password..." ref={pwdRef} />
+            <button onClick={register}>Register</button>
+        </form>
+        
     )
 }
 

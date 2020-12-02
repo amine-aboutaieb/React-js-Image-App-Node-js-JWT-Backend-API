@@ -43,14 +43,11 @@ function Login({history}) {
     }
     
     return (
-        <>
-            <h3>Login</h3>
-            <form style={{display:"flex", alignItems:"center"}}>
-                <input type="text" placeholder="Email..." ref={emailRef} />
-                <input type="text" placeholder="Password..." ref={pwdRef} />
-                <button onClick={login}>Login</button>
-            </form>
-        </>
+        <form className="Form">
+            <input type="text" placeholder="Email..." ref={emailRef} />
+            <input type="password" placeholder="Password..." ref={pwdRef} />
+            <button onClick={login}>Login</button>
+        </form>
     )
 }
 

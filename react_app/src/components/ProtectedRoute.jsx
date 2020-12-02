@@ -12,7 +12,7 @@ function ProtectedRoute({path, component}) {
         }
     }
     return (
-        <Route path={path} exact render={checkRender} />
+        <Route path={path} exact={true} render={checkRender} />
     )
 }
 
