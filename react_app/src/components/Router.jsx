@@ -14,12 +14,12 @@ function Router() {
     const [state, dispatch] = StateReducer()
     return (
         <BrowserRouter>
-            <NavBar />
             <Switch>
                 <Route path="/Register" exact component={Register} />
-                <Route path="/login" exact component={Login} />
-                <Route path="/logout" component={Logout} />
                 <StateContext.Provider value={{state, dispatch}}>
+                    <NavBar />
+                    <Route path="/logout" exact component={Logout} />
+                    <Route path="/login" exact component={Login} />
                     <ProtectedRoute path="/" component={Home}></ProtectedRoute>
                     <ProtectedRoute path="/camera" component={Camera}></ProtectedRoute>   
                 </StateContext.Provider>  

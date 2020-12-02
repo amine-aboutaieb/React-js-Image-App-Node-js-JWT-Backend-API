@@ -18,5 +18,18 @@ module.exports = {
             res.status(400).json({message : "Insufficient registration data"})
         }
         
+    },
+    getUserData : (req,res)=>{
+        // console.log("FROM USER CONTROLLER =>"+req.userId)
+        UserModel.getUserData(req.userId).then((result)=>{
+            if(result.length > 0){
+                console.log(result[0])
+                res.status(200).json({data : result[0], id : req.userId})
+            }else{
+                res.status(400).json({message : "An error has occured"})    
+            }
+        }).catch((error)=>{
+            res.status(400).json({message : "An error has occured"})
+        })
     }
 }

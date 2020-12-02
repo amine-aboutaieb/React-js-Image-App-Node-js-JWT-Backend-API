@@ -1,13 +1,20 @@
-import {useEffect} from 'react'
+import {useEffect, useContext} from 'react'
+import {StateContext} from './StateContext'
 
 
-function Logout() {
-
+function Logout({history}) {
+    const {state, dispatch} = useContext(StateContext)
     useEffect(()=>{
+        dispatch({type : "clearState"})
         if(localStorage.getItem("token") !== null){
             localStorage.removeItem("token")
+            //document.location.href = "/login"
+            history.push('/login')
+        }else{
+            history.push("/")
         }
-        document.location.href = "http://localhost:3000/login"
+        
+        // history.push('/login')
     })
 
     return null

@@ -1,14 +1,14 @@
 import React, {useContext} from 'react'
-import {VerifyToken} from './CustomHooks/verifyToken'
+import {GetUserData} from './CustomHooks/getUserData'
 import {StateContext} from './StateContext'
 
 
-function Home({history}) {
+function Home() {
+    GetUserData()
     const {state, dispatch} = useContext(StateContext)
-    VerifyToken(history, state, dispatch)
     return (
         <div>
-            <h1>Home</h1>
+            <h1> {state.username}'s Homepage</h1>
         </div>
     )
 }

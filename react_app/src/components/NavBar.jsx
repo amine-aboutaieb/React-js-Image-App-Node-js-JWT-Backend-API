@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Link} from 'react-router-dom'
+import {StateContext} from './StateContext'
 
 function NavBar() {
+    const {state} = useContext(StateContext)
     return (
         <nav>
             {
-                (localStorage.getItem('token') !== null) ?
+                (state.id !== null && state.username !== null && state.email !== null) ?
                 <>
                     <Link to="/">Home</Link>
                     <Link to="/camera">Camera</Link>

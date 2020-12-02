@@ -1,7 +1,11 @@
-import React, {useRef} from 'react'
+import React, {useRef, useContext} from 'react'
 import {CheckAuth} from './CustomHooks/checkToken'
+import {StateContext} from './StateContext'
 
 function Login({history}) {
+    CheckAuth(history)
+    const {state, dispatch} = useContext(StateContext)
+
     const emailRef = useRef()
     const pwdRef = useRef()
     const login = (e)=>{
@@ -28,15 +32,16 @@ function Login({history}) {
                     alert("Auth Success")
                     console.log(data.token);
                     localStorage.setItem("token", data.token)
-                    // history.push("/")
-                    document.location.href = "http://localhost:3000/"
+                    //SET CONTEXT DATA
+                    //document.location.href = "http://localhost:3000/"
+                    history.push('/')
                 }else if(status === 400){
                     alert(data)
                 }
             })
         }
     }
-    CheckAuth(history)
+    
     return (
         <>
             <h3>Login</h3>

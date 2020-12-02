@@ -24,5 +24,16 @@ module.exports = {
                 }
             })
         })
+    },
+    getUserData : (id)=>{
+        return new Promise((resolve, reject)=>{
+            dbCon.query(`SELECT username, email FROM accounts WHERE id = ${dbCon.escape(id)};`, (error, result)=>{
+                if(error){
+                    reject(error)
+                }else{
+                    resolve(result)
+                }
+            })
+        })
     }
 }

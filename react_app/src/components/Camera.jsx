@@ -1,10 +1,10 @@
 import React, {useContext} from 'react'
-import {VerifyToken} from './CustomHooks/verifyToken'
 import {StateContext} from './StateContext'
+import {GetUserData} from './CustomHooks/getUserData'
 
-function Camera({history}) {
+function Camera() {
+    GetUserData()
     const {state, dispatch} = useContext(StateContext)
-    VerifyToken(history, state, dispatch)
     return (
         <div>
            <h1>Camera App</h1> 
