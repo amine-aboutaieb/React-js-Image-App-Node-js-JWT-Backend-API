@@ -134,10 +134,46 @@ body {
   font-size: 1.5em;
 }
 
-.optBtn {
+.optBtn,
+#imageViewerBtns button {
   background-color: #61dafb;
   color: #2f333d;
   font-weight: bold;
   font-size: 1em;
   border: none;
+}
+
+#takePictureBtn {
+  width: 5vw;
+  height: 5vw;
+  left: 47.5%;
+  border: 5px solid #61dafb;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 3px;
+  cursor: pointer;
+  background-color: rgb(97, 218, 251, 0.5);
+}
+
+#takePictureBtn:hover {
+  background-color: rgb(97, 218, 251);
+}
+
+#takePictureBtn:active {
+  background-color: rgb(97, 218, 251, 0.5);
+}
+
+#imageViewerBtns {
+  position: fixed;
+  left: 25%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  /* flex-direction: column; */
+  width: 50%;
+}
+#imageViewerBtns button {
+  padding: 1% 0;
+  /* margin: 3% 0; */
+  width: 40%;
 }

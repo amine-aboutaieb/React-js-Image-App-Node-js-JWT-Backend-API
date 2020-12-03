@@ -17,7 +17,7 @@ function Cam({state}) {
     return (
         <div id="camVidContainer" ref={vidContainer}>
             <video id="camVid" ref={vidRef} style={{objectFit:state.camMode}} poster={defaultCameraImg}></video>
-            <CamCommands state={state} vidContainer={vidContainer} />
+            <CamCommands state={state} vidContainer={vidContainer} camVid={vidRef} />
         </div>
     )
 }
