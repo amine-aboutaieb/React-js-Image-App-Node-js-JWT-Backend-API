@@ -13,7 +13,7 @@ body {
   text-align: center;
   color: #61dafb;
   background-color: #20232a;
-  padding: 3% 0;
+  padding: 2% 0;
   font-weight: bolder;
   text-shadow: 0px 0px 2px black;
 }
@@ -61,7 +61,8 @@ body {
 .Form input:focus {
   outline-color: #2fa4c5;
 }
-.Form button {
+.Form button,
+#camOn {
   background-color: #61dafb;
   color: #2f333d;
   font-weight: bold;
@@ -76,4 +77,67 @@ body {
 .homeTitlep1 {
   color: #61dafb;
   font-style: italic;
+}
+
+#camVidContainer {
+  width: 100vw;
+  margin: 0 auto;
+  height: 99vh;
+  position: fixed;
+  top: 0;
+  background-color: black;
+}
+#camVid {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#camOn {
+  display: block;
+  margin: 0 auto;
+  padding: 2%;
+  font-size: 1em;
+  border: none;
+}
+
+#CameraWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+#camVidCommandsContainer {
+  width: 7%;
+  padding: 1%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #2f333d;
+}
+
+#camVidCommandsContainer button {
+  padding: 5%;
+  margin: 4% 0;
+}
+
+#camVidCloseBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 5px;
+  border-radius: 10%;
+  font-size: 1.5em;
+}
+
+.optBtn {
+  background-color: #61dafb;
+  color: #2f333d;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
 }

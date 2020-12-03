@@ -3,7 +3,6 @@ import React, {useReducer} from 'react'
 function reducer(state, action){
     let {type, payload} = action
     if(type === "setStateData"){
-        console.log(type, payload);
         return {...state, id : payload.id, username : payload.username, email : payload.email}
     }else if(type === "clearState"){
         return {...state, id : null, username : null, email : null }
