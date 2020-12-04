@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 function CamCommands({state, vidContainer, camVid}) {
     
@@ -15,19 +15,23 @@ function CamCommands({state, vidContainer, camVid}) {
     }
     const takePicture = ()=>{
         let canvas = document.createElement('canvas')
-        canvas.width = camVid.current.clientWidth
-        canvas.height = camVid.current.clientHeight
+        canvas.width = 650
+        canvas.height = 500
         let ctx = canvas.getContext("2d")
         ctx.drawImage(camVid.current, 0, 0, canvas.width, canvas.height)
         let imageData = canvas.toDataURL()
-        state.setImageViewerOn(true)
-        state.setImageViewerData(imageData)
-        state.setCamOn(false)
+        camVid.current.pause()
+        setTimeout(()=>{
+            state.setImageViewerOn(true)
+            state.setImageViewerData(imageData)
+            state.setCamOn(false)
+        },1000)
     }
 
     const handleCloseCamera = ()=>{
         state.setCamOn(false)
         state.setCamOnBtn(true)
+        camVid.current.pause()
     }
 
     return (

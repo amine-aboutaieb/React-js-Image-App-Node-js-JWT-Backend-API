@@ -6,12 +6,24 @@ function Cam({state}) {
 
     const vidRef = useRef()
     const vidContainer = useRef()
+    let stopStream = null
     useEffect(()=>{
         navigator.mediaDevices.getUserMedia({video : true}).then((stream)=>{
             vidRef.current.srcObject = stream
             vidRef.current.play()
             state.setFullScreen(vidContainer.current)
+            stopStream = ()=>{
+                stream.getTracks().forEach((track)=>{
+                    track.stop()
+                })
+            }
+        }).catch((error)=>{
+            alert("A camera error has occured")
+            console.log(error);
         })
+        return ()=>{
+            stopStream()
+        }
     },[])
 
     return (

@@ -8,7 +8,4 @@ export function CheckAuth(history) {
             history.push('/')
         }
     }, [])
-
-
-    return 0
 }
