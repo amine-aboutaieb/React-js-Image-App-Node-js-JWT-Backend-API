@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect } from 'react'
 import {handleVerificationResponse} from '../CustomHooks/handleVerificationResponse'
 
 export function GetUserPosts(posts, setPosts) {

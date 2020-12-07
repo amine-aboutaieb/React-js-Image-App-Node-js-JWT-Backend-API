@@ -18,7 +18,7 @@ function Home() {
             <h2 className="homeTitle"> <span className="homeTitlep1">{state.username}'s</span> Homepage</h2>
             {
                 (posts.length > 0) ?
-                    <HomePosts posts={posts} />
+                    <HomePosts posts={posts} setPosts={setPosts} />
                 : <h3 id="noPostsMsg">No posts yet</h3>
             }
             
