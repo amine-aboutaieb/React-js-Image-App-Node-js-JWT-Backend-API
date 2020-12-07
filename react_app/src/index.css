@@ -128,7 +128,7 @@ body {
 #camVidCommandsContainer button {
   width: 100%;
   padding: 5%;
-  margin: 4% 0;
+  margin: 4% 2%;
   font-size: 1em;
 }
 
@@ -279,6 +279,18 @@ body {
 
 .leftImg, .rightImg{
   padding:5px;
+  margin:0px 2%;
+}
+
+#error404{
+  widows: 60%;
+  margin:5% auto 0 auto;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-direction:column;
+  height:10vh;
 }
 
 
@@ -298,8 +310,8 @@ body {
   #imagePlayerImg{
     width:100%;
   }
-  #camVidCloseBtn,.leftImg, .rightImg{
-    width:20%;
+  #camVidCloseBtn{
+    width:10%;
   }
   .leftImg, .rightImg{
     margin:2% 0;

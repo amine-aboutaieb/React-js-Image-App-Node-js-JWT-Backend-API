@@ -11,8 +11,6 @@ function Home() {
     const [posts, setPosts] = useState([])
 
     GetUserPosts(posts, setPosts)
-    
-    console.log("render");
     return (
         <div>
             <h2 className="homeTitle"> <span className="homeTitlep1">{state.username}'s</span> Homepage</h2>

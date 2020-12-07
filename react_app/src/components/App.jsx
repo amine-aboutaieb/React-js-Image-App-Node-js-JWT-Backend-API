@@ -4,6 +4,7 @@ import '../index.css'
 
 
 function App() {
+    console.log("App render");
     return (
         <>
             <h1 className="mainTitle">React js Image App</h1>
