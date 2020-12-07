@@ -226,7 +226,7 @@ body {
   width: 100%;
   margin: 3% auto 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .postBox {
   display: flex;
@@ -245,8 +245,8 @@ body {
   font-size: 1.2em;
 }
 .postBox img {
-  width: 60%;
-  margin:2%;
+  width: 80%;
+  margin-bottom:5%;
 }
 
 #noPostsMsg {
@@ -282,7 +282,7 @@ body {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1050px) {
   .Form {
     width: 90vw;
   }
@@ -292,7 +292,16 @@ body {
   #imageViewerContainer {
     width: 90%;
   }
+  #homeImagePlayer{
+    flex-direction:column;
+  }
   #imagePlayerImg{
-    width:70%;
+    width:100%;
+  }
+  #camVidCloseBtn,.leftImg, .rightImg{
+    width:20%;
+  }
+  .leftImg, .rightImg{
+    margin:2% 0;
   }
 }
